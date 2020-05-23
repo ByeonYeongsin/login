@@ -3,18 +3,47 @@
  */
 
 import React from "react";
-import {Link, Route} from 'react-router-dom';
-import Login from "./Login";
-import Join from "./Join";
-import Login_end from "./Login_end";
-import Join_end from "./Join_end";
+import { Link, Route } from "react-router-dom";
+import styled from "styled-components";
+const ButtonLogin = styled.button`
+  width: 254px;
+  height: 100px;
+  background-color: #075d54;
+  color: #ffffff;
+  text-align: center;
+  border: 0px solid;
+  font-size: 30px;
+`;
+const ButtonJoin = styled.button`
+  width: 254px;
+  height: 100px;
+  background-color: #128c7e;
+  color: #ffffff;
+  text-align: center;
+  border: 0px solid;
+  font-size: 30px;
+`;
+const ButtonWrap = styled.div`
+  text-align: center;
+`;
+const MainPage = styled.h2`
+  font-size: 50px;
+  text-align: center;
+  color: #000000;
+`;
 
-const Main = () =>(
-    <div>
-        <br/>메인페이지입니다.<br/>
-        <button><Link to = "/Login">Login</Link></button>
-        <button><Link to = "/Join">Join</Link></button>
-    </div>
+const Main = () => (
+  <div>
+    <MainPage>Main</MainPage>
+    <ButtonWrap>
+      <Link to="/Login">
+        <ButtonLogin>Login</ButtonLogin>
+      </Link>
+      <Link to="/Join">
+        <ButtonJoin>Join</ButtonJoin>
+      </Link>
+    </ButtonWrap>
+  </div>
 );
 
 export default Main;
